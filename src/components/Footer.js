@@ -3,9 +3,9 @@ import ChilidLogo from './ChilidLogo';
 
 const Footer = () => {
 	return (
-		<div className="l-footer">
+		<footer className="l-footer">
 			<ChilidLogo />
-		</div>
+		</footer>
 	)
 }
 

@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import Pagination from './Pagination';
 
+const months = [
+	'styczeń',
+	'luty',
+	'marzec',
+	'kwiecień',
+	'maj',
+	'czerwiec',
+	'lipiec',
+	'sierpień',
+	'wrzesień',
+	'pazdziernik',
+	'listopad',
+	'grudzień'
+];
+
 class Table extends Component {
 	constructor(props) {
 		super(props);
@@ -241,61 +256,9 @@ class Table extends Component {
 	}
 
 	formatDate = (date) => {
-		let day = date.getDate();
-		let month = date.getMonth();
-		let year = date.getFullYear();
-
-		switch (month) {
-			case 1:
-				month = 'styczeń';
-				break;
-
-			case 2:
-				month = 'luty';
-				break;
-
-			case 3:
-				month = 'marzec';
-				break;
-
-			case 4:
-				month = 'kwiecień';
-				break;
-
-			case 5:
-				month = 'maj';
-				break;
-
-			case 6:
-				month = 'czerwiec';
-				break;
-
-			case 7:
-				month = 'lipiec';
-				break;
-
-			case 8:
-				month = 'sierpień';
-				break;
-
-			case 9:
-				month = 'wrzesień';
-				break;
-
-			case 10:
-				month = 'październik';
-				break;
-
-			case 11:
-				month = 'listopad';
-				break;
-
-			case 12:
-				month = 'grudzień';
-				break;
-
-			default:
-		}
+		const day = date.getDate();
+		const month = months[date.getMonth() - 1];
+		const year = date.getFullYear();
 
 		const fullDate = `${day} ${month} ${year}`;
 

@@ -54,7 +54,6 @@ class App extends Component {
         company: data.company,
         note: data.note
       });
-
     });
 
     return newData;
