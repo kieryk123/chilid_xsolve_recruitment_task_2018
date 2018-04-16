@@ -1,0 +1,21 @@
+.c-pagination {
+  font-size: $pagination-font-size;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  color: $pagination-color;
+  margin-top: 30px;
+
+  &__item {
+		display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+
+    &--active {
+      color: $pagination-active-color;
+    }
+
+		&--back, &--next {
+			color: $pagination-back-next-color;
+		}
+  }
+}

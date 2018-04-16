@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext");
+.l-header {
+  margin-bottom: 30px; }
+  .l-header__title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.89px;
+    line-height: 43px;
+    color: white; }
+    @media only screen and (max-width: 768px) {
+      .l-header__title {
+        font-size: 30px; } }
+    @media only screen and (max-width: 600px) {
+      .l-header__title {
+        font-size: 26px; } }
+    @media only screen and (max-width: 480px) {
+      .l-header__title {
+        font-size: 22px; } }
+
+.l-footer {
+  margin-top: 80px; }
+  .l-footer__logo {
+    width: 57.6px;
+    height: 22px;
+    color: white; }
+    .l-footer__logo path, .l-footer__logo polygon {
+      fill: white; }
+
+.c-table {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 20px 20px rgba(0, 0, 0, 0.12);
+  max-width: 800px;
+  width: 800px; }
+  @media only screen and (max-width: 865px) {
+    .c-table {
+      width: 100%; } }
+  .c-table__head {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3A5071;
+    background-color: #E5EEFB;
+    box-shadow: inset 0 1px 3px 0 #FFFFFF; }
+    @media only screen and (max-width: 768px) {
+      .c-table__head {
+        display: none; } }
+  .c-table__headerCell span {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    letter-spacing: 0.66px;
+    cursor: pointer; }
+    .c-table__headerCell span:before {
+      position: absolute;
+      top: calc(50% - 4px);
+      right: -15px;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 2.5px 3px 2.5px;
+      border-color: transparent transparent #3A5071 transparent;
+      opacity: 0.7; }
+    .c-table__headerCell span:after {
+      position: absolute;
+      top: calc(50% + 1px);
+      right: -15px;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 3px 2.5px 0 2.5px;
+      border-color: #3A5071 transparent transparent transparent;
+      opacity: 0.7; }
+  .c-table__body {
+    font-size: 16px;
+    color: #577198; }
+    .c-table__body .c-table__row:nth-child(even) {
+      background-color: #F1F6FC; }
+    .c-table__body .c-table__row:nth-child(odd) {
+      background-color: white; }
+  .c-table__row {
+    width: 100%; }
+    .c-table__row .c-table__dataCell:nth-child(odd) {
+      font-weight: 700; }
+  .c-table__dataCell, .c-table__headerCell {
+    padding: 17px;
+    border: 0;
+    border-right: 1px solid #DAE0E9;
+    text-align: center; }
+    @media only screen and (max-width: 768px) {
+      .c-table__dataCell, .c-table__headerCell {
+        display: block;
+        padding: 12px;
+        border-right: 0;
+        border-bottom: 1px solid #DAE0E9; } }
+    .c-table__dataCell:last-child, .c-table__headerCell:last-child {
+      border-right: 0; }
+  .c-table__dataCell {
+    position: relative;
+    letter-spacing: 0.75px; }
+    @media only screen and (max-width: 768px) {
+      .c-table__dataCell {
+        text-align: left;
+        padding-left: 50%; }
+        .c-table__dataCell:before {
+          position: absolute;
+          left: 12px;
+          content: attr(data-th) ": ";
+          font-size: 14px; } }
+    @media only screen and (max-width: 480px) {
+      .c-table__dataCell {
+        padding-left: 42%;
+        line-height: 20px; } }
+
+.c-pagination {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  color: #272F3E;
+  margin-top: 30px; }
+  .c-pagination__item {
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer; }
+    .c-pagination__item--active {
+      color: white; }
+    .c-pagination__item--back, .c-pagination__item--next {
+      color: white; }
+
+.c-loader {
+  -webkit-animation: rotate-center 1s linear infinite;
+  animation: rotate-center 1s linear infinite; }
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+#root {
+  padding: 30px; }
+  @media only screen and (max-width: 768px) {
+    #root {
+      width: 100%; } }
+  @media only screen and (max-width: 480px) {
+    #root {
+      padding: 15px; } }

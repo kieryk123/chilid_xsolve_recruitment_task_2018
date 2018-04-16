@@ -1,0 +1,121 @@
+.c-table {
+  border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 20px 20px rgba(0,0,0,0.12);
+  max-width: 800px;
+  width: 800px;
+
+  @media only screen and (max-width : 865px) {
+		width: 100%;
+	}
+
+  &__head {
+    font-size: $table-header-font-size;
+    font-weight: 700;
+    color: $table-header-color;
+    background-color: $table-header-bg-color;
+    box-shadow: inset 0 1px 3px 0 #FFFFFF;
+
+    @media only screen and (max-width : 768px) {
+      display: none;
+    }
+  }
+
+	&__headerCell {
+		span {
+			position: relative;
+			display: inline-block;
+			margin-right: 15px;
+      letter-spacing: 0.66px;
+      cursor: pointer;
+
+			&:before {
+				position: absolute;
+				top: calc(50% - 4px);
+				right: -15px;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 2.5px 3px 2.5px;
+				border-color: transparent transparent $table-header-color transparent;
+				opacity: 0.7;
+			}
+
+			&:after {
+				position: absolute;
+				top: calc(50% + 1px);
+				right: -15px;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 3px 2.5px 0 2.5px;
+				border-color: $table-header-color transparent transparent transparent;
+				opacity: 0.7;
+			}
+		}
+	}
+
+  &__body {
+    font-size: $table-body-font-size;
+    color: $table-body-color;
+
+    .c-table__row:nth-child(even) {
+      background-color: $table-body-bg-color-even;
+    }
+
+    .c-table__row:nth-child(odd) {
+      background-color: $table-body-bg-color;
+    }
+  }
+
+  &__row {
+    width: 100%;
+
+    .c-table__dataCell:nth-child(odd) {
+      font-weight: 700;
+    }
+  }
+
+  &__dataCell, &__headerCell {
+    padding: $table-cell-padding;
+    border: 0;
+    border-right: 1px solid $table-cell-border-color;
+    text-align: center;
+
+    @media only screen and (max-width : 768px) {
+      display: block;
+      padding: 12px;
+      border-right: 0;
+      border-bottom: 1px solid $table-cell-border-color;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &__dataCell {
+    position: relative;
+    letter-spacing: 0.75px;
+
+    @media only screen and (max-width : 768px) {
+      text-align: left;
+      padding-left: 50%;
+      &:before {
+        position: absolute;
+        left: 12px;
+        content: attr(data-th)": ";
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (max-width : 480px) {
+      padding-left: 42%;
+      line-height: 20px;
+    }
+  }
+}

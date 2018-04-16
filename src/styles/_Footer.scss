@@ -1,0 +1,13 @@
+.l-footer {
+	margin-top: 80px;
+
+	&__logo {
+	  width: 57.6px;
+	  height: 22px;
+	  color: $footer-logo-color;
+
+	  path, polygon {
+	    fill: $footer-logo-color;
+	  }
+	}
+}

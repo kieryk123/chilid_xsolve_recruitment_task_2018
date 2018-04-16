@@ -1,0 +1,24 @@
+// assets import
+@import "styles/_variables";
+
+// parts import
+@import "styles/_Header";
+@import "styles/_Footer";
+@import "styles/_Table";
+@import "styles/_Pagination";
+@import "styles/_Loader";
+
+// fonts import
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext');
+
+#root {
+	padding: 30px;
+
+	@media only screen and (max-width : 768px) {
+		width: 100%;
+	}
+
+	@media only screen and (max-width : 480px) {
+		padding: 15px;
+	}
+}
